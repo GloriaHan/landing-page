@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Residential College Landing Page</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <header class="header">
+    <div class="logo">
+      <a href="#"><img src="./img/University logo.svg" alt="Your Logo"></a>
+    </div>
+    <nav class="menu">
+      <ul>
+        <li class="sub-menu">
+          <a href="#">Study with us</a>
+          <ul>
+            <li><a href="#">Find a course</a></li>
+            <li><a href="#">How to apply</a></li>
+          </ul>
+        </li>
+
+        <li class="sub-menu">
+          <a href="#">Student life</a>
+          <ul>
+            <li><a href="#">Discovery Melbourne</a></li>
+            <li><a href="#">Information for...</a></li>
+          </ul>
+        </li>
+
+        <li class="sub-menu">
+          <a href="#">Accommodation</a>
+          <ul>
+            <li><a href="#">Accommodation options</a></li>
+            <li><a href="#">Apply for accommodation</a></li>
+            <li><a href="#">Moving support for international students</a></li>
+          </ul>
+        </li>
+
+        <li><a href="#">Talk to us</a>
+          <ul>
+            <li><a href="#">Contact us</a></li>
+            <li><a href="#">Information for</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+    <div class="search">
+      <input type="text" class="searchinput" placeholder="search...">
+      <button class="btn"><i class="fas fa-search"></i></button>
+    </div>
+  </header>
+
+  <div class="sub-header">
+    <div class="contact-form">
+      <h2>Accommodation Application</h2>
+      <form>
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" name="firstName" required>
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" name="lastName" required>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" required>
+        <label for="text">Accommodation preferences:</label>
+        <textarea id="text" name="text" rows="4" required></textarea>
+        <div class="submit-button">
+          <button type="submit" onclick="submitForm()">Submit</button>
+        </div>
+      </form>
+      <div class="message" style="display:none;">
+        <p>Thank you, <span id="firstNameResult"></span>.</p>
+        <p>Your information has been accepted, we will contact you in 3 business days.</p>
+      </div>
+    </div>
+
+    <div class="rotator-slider">
+      <div class="slide">
+        <img src="./img/slide1.jpg" alt="Slide 1">
+      </div>
+
+      <div class="slide">
+        <img src="./img/slide2.jpg" alt="Slide 2">
+      </div>
+
+      <div class="slide">
+        <img src="./img/slide3.jpg" alt="Slide 3">
+      </div>
+    </div>
+  </div>
+
+  <!-- First Section - 3 Cards -->
+  <section class="cards-section">
+    <div class="card">
+      <img src="./img/Newman College.jpg" alt="Newman College">
+      <a href="#">
+        <h3>Newman College</h3>
+      </a>
+      <p>Newman College is a co-educational residential College affiliated with the University of Melbourne. </p>
+    </div>
+    <div class="card">
+      <img src="./img/Ormond College.jpg" alt="Ormond College">
+      <a href="#">
+        <h3>Ormond College</h3>
+      </a>
+      <p>Ormond College occupies 10 acres of land on the northern end of the University of Melbourne’s Parkville campus.
+      </p>
+    </div>
+    <div class="card">
+      <img src="./img/Queen's College.jpg" alt="Queen's College">
+      <a href="#">
+        <h3>Queen's College</h3>
+      </a>
+      <p>Queen’s College will take your university experience to the next level. At Queen’s, you’ll discover a world of
+        people who are passionate, curious and inspired. </p>
+    </div>
+  </section>
+
+  <!-- Second Section - Image Left Text Right -->
+  <section class="image-text-section">
+    <img src="./img/Schedule a tour.jpg" alt="Schedule a tour">
+    <div class="text">
+      <h2>Schedule a tour</h2>
+      <p>Interested in seeing our beautiful campus and facilities in person? Schedule a tour today and let one of our
+        knowledgeable staff members show you around. You'll get an up-close look at our living spaces, recreational
+        areas, and state-of-the-art amenities, and you'll have the opportunity to ask any questions you may have about
+        our programs and services. Don't wait, schedule your tour now!</p>
+      <button class="cta-button">Schedule a tour</button>
+    </div>
+  </section>
+
+  <!-- Third Section - Thumbnail Gallery -->
+  <section class="thumbnail-gallery">
+    <h2>Residential College Gallery</h2>
+    <div class="gallery-row">
+      <img src="./img/gallery img1.jpg" alt="Gallery Image 1">
+      <img src="./img/gallery img2.jpg" alt="Gallery Image 2">
+      <img src="./img/gallery img3.jpg" alt="Gallery Image 3">
+      <img src="./img/gallery img4.jpg" alt="Gallery Image 4">
+    </div>
+    <div class="gallery-row">
+      <img src="./img/gallery img5.jpg" alt="Gallery Image 5">
+      <img src="./img/gallery img6.jpg" alt="Gallery Image 6">
+      <img src="./img/gallery img7.jpg" alt="Gallery Image 7">
+      <img src="./img/gallery img8.jpg" alt="Gallery Image 8">
+    </div>
+  </section>
+
+  <!-- The lightbox modal -->
+  <div id="lightbox-modal" class="lightbox-modal">
+    <span class="close-btn">&times;</span>
+    <div class="lightbox-controls">
+      <button class="prev-btn">&lt;</button>
+      <button class="next-btn">&gt;</button>
+    </div>
+    <img id="lightbox-img" class="lightbox-img">
+  </div>
+
+  <!-- Fourth Section - Content Block -->
+  <section class="content-block">
+    <h2>Useful information</h2>
+    <div class="content">
+      <div>
+        <h3 class="toggle">Accommodation locations</h3>
+        <div class="toggle-content">
+          <p>While all of our Colleges offer the same great levels of support, each have their own distinct
+            personalities and culture.</p>
+          <p>Find out more about each College below and discover which one is the right fit for you.</p>
+          <p>Remember, you’ll have the chance to preference Colleges in your application, so as you do your research,
+            add them to your Favourites to keep track.</p>
+          <ul>
+            <li><a href="#">Newman College</a></li>
+            <li><a href="#">Ormond College</a></li>
+            <li><a href="#">Queen's College</a></li>
+          </ul>
+        </div>
+      </div>
+      <div>
+        <h3 class="toggle">Local Input Networking and Communications (LINC) Committees</h3>
+        <div class="toggle-content">
+          <p>LINC committees will provide a vital link between residential colleges and the community. There will be one
+            LINC committee for each of the nine residential colleges. They comprise community members who provide advice
+            and support to the college manager and staff.</p>
+          <ul>
+            <li><a href="#">The role of the committee</a></li>
+            <li><a href="#">Becoming a committee member</a></li>
+          </ul>
+        </div>
+      </div>
+      <div>
+        <h3 class="toggle">Useful links</h3>
+        <div class="toggle-content">
+          <ul>
+            <li><a href="#">Financial assistance</a></li>
+            <li><a href="#">Support organisations</a></li>
+            <li><a href="#">Student concerns and complaints</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="video-section">
+    <div class="container">
+      <h2>Visual University Tour</h2>
+      <div class="video-wrapper">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0"
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-cols">
+      <div class="col">
+        <h4>Site Navigation</h4>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="col">
+        <h4>More Links</h4>
+        <ul>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Use</a></li>
+          <li><a href="#">FAQs</a></li>
+        </ul>
+      </div>
+      <div class="col">
+        <img src="./img/unimelb-logo.svg" alt="Footer Logo">
+      </div>
+    </div>
+    <div class="footer-tagline">Built with Acora</div>
+  </footer>
+
+  <!-- script  -->
+  <script src="landingpage.js"></script>
+</body>
+
+</html>
