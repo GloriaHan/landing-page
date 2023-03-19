@@ -7,6 +7,7 @@ btn.addEventListener('click', () => {
   search.classList.toggle('active')
   searchinput.focus()
 })
+// responsive header menu design
 
 // Sub Header: accommodation application form
 const message = localStorage.getItem('message')
