@@ -41,7 +41,7 @@
             <ul>
               <li><a href="#">Accommodation options</a></li>
               <li><a href="#">Apply for accommodation</a></li>
-              <li><a href="#">Moving support for international students</a></li>
+              <li><a href="#">Moving support</a></li>
             </ul>
           </li>
 
@@ -63,19 +63,19 @@
   <div class="sub-header">
     <div class="contact-form">
       <h2>Accommodation Application</h2>
-      <form>
-        <label for="firstName">First Name:</label>
+      <form id="myForm" onsubmit="event.preventDefault(); submitForm()">
+        <label for="firstName" class="required">First Name:</label>
         <input type="text" id="firstName" name="firstName" required>
-        <label for="lastName">Last Name:</label>
+        <label for="lastName" class="required">Last Name:</label>
         <input type="text" id="lastName" name="lastName" required>
-        <label for="email">Email:</label>
+        <label for="email" class="required">Email:</label>
         <input type="email" id="email" name="email" required>
-        <label for="phone">Phone Number:</label>
-        <input type="tel" pattern="^\d{3}-\d{3}-\d{4}$" id="phone" name="phone" required>
-        <label for="text">Accommodation preferences:</label>
+        <label for="phone" class="required">Phone Number: (0123 456 789)</label>
+        <input type="tel" id="phone" name="phone" required>
+        <label for="text" class="required">Accommodation preferences:</label>
         <textarea id="text" name="text" rows="4" required></textarea>
         <div class="submit-button">
-          <button type="submit" onclick="submitForm()">Submit</button>
+          <button type="submit">Submit</button>
         </div>
       </form>
       <div class="message" style="display:none;">
@@ -83,6 +83,7 @@
         <p>Your application has been accepted, we will contact you in 3 business days.</p>
       </div>
     </div>
+
 
     <div class="rotator-slider">
       <div class="slide active">

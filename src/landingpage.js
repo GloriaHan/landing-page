@@ -24,10 +24,10 @@ btn.addEventListener('click', () => {
   search.classList.toggle('active')
   searchinput.focus()
 })
-// responsive header menu design
 
 // Sub Header: accommodation application form
 const message = localStorage.getItem('message')
+
 if (message) {
   document.querySelector('.message').style.display = 'block'
   document.getElementById('firstNameResult').textContent = message
@@ -44,15 +44,54 @@ function submitForm() {
   const text = document.getElementById('text').value
 
   // Perform basic form validation
-  if (
-    firstName === '' ||
-    lastName === '' ||
-    email === '' ||
-    phone === '' ||
-    text === ''
-  ) {
-    alert('Please fill out all required fields.')
-    return
+  let isValid = true
+  if (firstName === '') {
+    document.getElementById('firstName').style.border = '1px solid red'
+    isValid = false
+  } else {
+    document.getElementById('firstName').style.border = '1px solid #ced4da'
+  }
+
+  if (lastName === '') {
+    document.getElementById('lastName').style.border = '1px solid red'
+    isValid = false
+  } else {
+    document.getElementById('lastName').style.border = '1px solid #ced4da'
+  }
+
+  if (email === '') {
+    document.getElementById('email').style.border = '1px solid red'
+    isValid = false
+  } else {
+    document.getElementById('email').style.border = '1px solid #ced4da'
+  }
+
+  if (phone === '') {
+    document.getElementById('phone').style.border = '1px solid red'
+    isValid = false
+  } else {
+    document.getElementById('phone').style.border = '1px solid #ced4da'
+  }
+
+  if (text === '') {
+    document.getElementById('text').style.border = '1px solid red'
+    isValid = false
+  } else {
+    document.getElementById('text').style.border = '1px solid #ced4da'
+  }
+  // Validate the phone number
+  const phoneRegex1 = /^\d{4} \d{3} \d{3}$/
+  const phoneRegex2 = /^\d{10}$/
+  if (!phoneRegex1.test(phone) && !phoneRegex2.test(phone)) {
+    console.log("rest")
+    document.getElementById('phone').style.border = '1px solid red'
+    isValid = false
+  } else {
+    document.getElementById('phone').style.border = '1px solid #ced4da'
+  }
+
+  if (!isValid) {
+    return false
   }
 
   // Hide the form and display message
