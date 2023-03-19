@@ -549,8 +549,17 @@ footer {
     overflow-x: hidden;
   }
 
+  .header {
+    grid-template-columns: auto 15%;
+  }
+
   .menu {
     display: none;
+  }
+
+  .search.active .searchinput {
+    width: 120px;
+    left: -120px;
   }
 
   .contact-form {
