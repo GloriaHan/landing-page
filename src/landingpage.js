@@ -122,7 +122,12 @@ closeBtn.addEventListener('click', function () {
 })
 
 function showLightbox() {
-  lightboxModal.style.display = 'block'
+  let width = screen.width
+  if (width <= 480) {
+    lightboxModal.style.display = 'flex'
+  } else {
+    lightboxModal.style.display = 'block'
+  }
 }
 
 function hideLightbox() {
