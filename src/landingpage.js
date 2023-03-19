@@ -140,4 +140,3 @@ toggles.forEach((toggle) => {
     toggle.classList.toggle('active')
   })
 })
-
