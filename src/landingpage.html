@@ -8,21 +8,22 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
     integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
   <header class="header">
     <div class="logo">
-      <a href="#"><img src="./img/University logo.svg" alt="Your Logo"></a>
+      <a href="#"><img src="./img/unimelb-logo.svg" alt="Landing College logo"></a>
     </div>
     <div class="menu-container">
-      <button class="menu-toggle"><i class="fas fa-bars"></i></button>
-      <nav class="menu">
+      <button class="menu-toggle" title="Toggle menu" aria-expanded="false" aria-controls="menu"><i
+          class="fas fa-bars"></i></button>
+      <nav class="menu" role="navigation" aria-label="Main Navigation">
         <ul>
           <li class="sub-menu">
             <a href="#">Study with us</a>
-            <ul>
+            <ul aria-label="Submenu">
               <li><a href="#">Find a course</a></li>
               <li><a href="#">How to apply</a></li>
             </ul>
@@ -30,7 +31,7 @@
 
           <li class="sub-menu">
             <a href="#">Student life</a>
-            <ul>
+            <ul aria-label="Submenu">
               <li><a href="#">Discovery Melbourne</a></li>
               <li><a href="#">Information for...</a></li>
             </ul>
@@ -38,7 +39,7 @@
 
           <li class="sub-menu">
             <a href="#">Accommodation</a>
-            <ul>
+            <ul aria-label="Submenu">
               <li><a href="#">Accommodation options</a></li>
               <li><a href="#">Apply for accommodation</a></li>
               <li><a href="#">Moving support</a></li>
@@ -46,7 +47,7 @@
           </li>
 
           <li><a href="#">Talk to us</a>
-            <ul>
+            <ul aria-label="Submenu">
               <li><a href="#">Contact us</a></li>
               <li><a href="#">Information for</a></li>
             </ul>
@@ -55,20 +56,20 @@
       </nav>
     </div>
     <div class="search">
-      <input type="text" class="searchinput" placeholder="search...">
-      <button class="btn"><i class="fas fa-search"></i></button>
+      <input type="text" class="searchinput" placeholder="search..." aria-label="Search">
+      <button class="btn" aria-label="Search button"><i class="fas fa-search"></i></button>
     </div>
   </header>
 
   <div class="sub-header">
     <div class="contact-form">
       <h2>Accommodation Application</h2>
-      <form id="myForm" onsubmit="event.preventDefault(); submitForm()">
+      <form id="myForm" novalidate onsubmit="event.preventDefault(); submitForm()">
         <label for="firstName" class="required">First Name:</label>
         <input type="text" id="firstName" name="firstName" required>
         <label for="lastName" class="required">Last Name:</label>
         <input type="text" id="lastName" name="lastName" required>
-        <label for="email" class="required">Email:</label>
+        <label for="email" class="required">Email: (test@example.com)</label>
         <input type="email" id="email" name="email" required>
         <label for="phone" class="required">Phone Number: (0123 456 789)</label>
         <input type="tel" id="phone" name="phone" required>
@@ -79,7 +80,7 @@
         </div>
       </form>
       <div class="message" style="display:none;">
-        <p>Thank you, <span id="firstNameResult"></span>.</p>
+        <p>Thank you, dear <span id="firstNameResult"></span>!</p>
         <p>Your application has been accepted, we will contact you in 3 business days.</p>
       </div>
     </div>
@@ -124,9 +125,8 @@
         <a href="#">
           <h3>Queen's College</h3>
         </a>
-        <p>Queen’s College will take your university experience to the next level. At Queen’s, you’ll discover a world
-          of
-          people who are passionate, curious and inspired. </p>
+        <p>Queen’s College will take your university experience to the next level. People here are passionate, curious
+          and inspired. </p>
       </div>
     </section>
 
@@ -176,9 +176,9 @@
           <h3 class="toggle">Accommodation locations</h3>
           <div class="toggle-content">
             <p>While all of our Colleges offer the same great levels of support, each have their own distinct
-              personalities and culture.</p>
-            <p>Find out more about each College below and discover which one is the right fit for you.</p>
-            <p>Remember, you’ll have the chance to preference Colleges in your application, so as you do your research,
+              personalities and culture. Find out more about each College below and discover which one is the right fit
+              for you. Remember, you’ll have the chance to preference Colleges in your application, so as you do your
+              research,
               add them to your Favourites to keep track.</p>
             <ul>
               <li><a href="#">Newman College</a></li>
@@ -216,11 +216,12 @@
 
 
     <section class="video-section">
-      <div class="container">
+      <div class="video-container">
         <h2>Visual University Tour</h2>
         <div class="video-wrapper">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0"
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/6Ql3Qu2mgqM" frameborder="0"
             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <p>Copy right @ University of Otago</p>
         </div>
       </div>
     </section>

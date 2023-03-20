@@ -6,15 +6,16 @@ html {
 }
 
 body {
-  background-color: #005fa3;
+  background-color: #e8e9e9;
   padding: 0;
   margin: 0;
+  font-family: Cambria, serif;
   font-size: 1rem;
   width: 100%;
 }
 
 .header {
-  font-family: Cambria, serif;
+  font-size: 3rem;
   font-weight: bold;
   background-color: #103953;
   display: grid;
@@ -24,7 +25,12 @@ body {
   width: 100%;
 }
 
-.header img {
+.logo a {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
   height: 3.75rem;
   padding: 0.5rem;
 }
@@ -41,13 +47,13 @@ body {
 }
 
 .menu {
-  color: #fff;
+  color: #ffffff;
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
 }
 
 .menu ul {
   list-style: none;
-  font-size: 20px;
+  font-size: 1.25rem;
   margin: 0;
   padding: 0;
 }
@@ -66,13 +72,13 @@ body {
 }
 
 .menu ul li:hover>a {
-  color: #dde9eb;
+  color: #ffffff;
   text-decoration: underline;
 }
 
 .menu ul li:hover ul {
   display: block;
-  background: #333;
+  background: #215170;
   z-index: 999;
 }
 
@@ -81,7 +87,6 @@ body {
   position: absolute;
   top: 100%;
   left: 0;
-  border: 1px solid #ccc;
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
 }
 
@@ -97,7 +102,7 @@ body {
 }
 
 .menu ul ul li a:hover {
-  background-color: #f9f9f9;
+  background-color: #406e8c;
 }
 
 
@@ -111,9 +116,9 @@ body {
 }
 
 .search .searchinput {
-  background-color: #fff;
+  background-color: #ffffff;
   border: 0;
-  font-size: 18px;
+  font-size: 1.25rem;
   padding: 10px;
   height: 20px;
   width: 20px;
@@ -123,10 +128,11 @@ body {
 }
 
 .btn {
-  background-color: #bfa;
+  background-color: #103953;
+  color:#ffffff;
   border: 0;
   cursor: pointer;
-  font-size: 24px;
+  font-size: 1.5rem;
   position: absolute;
   top: -5px;
   left: 0;
@@ -163,13 +169,14 @@ body {
   flex-direction: column;
   width: 30%;
   padding: 20px;
-  background-color: #f9f9f9;
+  font-size: 1.25rem;
+  background-color: #e8e9e9;
   border-radius: 5px;
 }
 
 .contact-form h2 {
-  font-size: 24px;
-  margin-bottom: 20px;
+  font-size: 1.5rem;
+  margin: 20px auto;
 }
 
 .contact-form label {
@@ -204,8 +211,8 @@ textarea {
 }
 
 .contact-form button[type="submit"] {
-  background-color: #4CAF50;
-  color: #fff;
+  background-color: #406e8c;
+  color: #ffffff;
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
@@ -213,21 +220,21 @@ textarea {
 }
 
 .contact-form button[type="submit"]:hover {
-  background-color: #3e8e41;
+  background-color: #103953;
 }
 
 .message {
   max-width: 500px;
   margin: 0 auto;
   padding: 20px;
-  background-color: #f9f9f9;
+  background-color: #ffffff;
   border-radius: 5px;
   margin-top: 20px;
   display: none;
 }
 
 .message p {
-  font-size: 18px;
+  font-size: 1.25rem;
   margin-bottom: 10px;
 }
 
@@ -281,7 +288,7 @@ textarea {
   grid-template-rows: 70% 10% 20%;
   width: 100%;
   height: 100%;
-  background-color: #fff;
+  background-color: #ffffff;
   border: 1px solid #ccc;
   border-radius: 4px;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
@@ -299,7 +306,12 @@ textarea {
   border-radius: 4px;
 }
 
+.card a {
+  text-decoration: none;
+}
+
 .card h3 {
+  color: #215170;
   margin: 0;
   font-size: 1.5rem;
   font-weight: bold;
@@ -309,8 +321,8 @@ textarea {
 
 .card p {
   margin: 0;
-  font-size: 1rem;
-  color: #666;
+  font-size: 1.25rem;
+  color: #303030;
   padding-top: 12px;
 }
 
@@ -333,29 +345,30 @@ textarea {
 }
 
 .image-text-section h2 {
-  font-size: 2.5rem;
+  font-size: 2.25rem;
+  font-weight: bold;
   margin-bottom: 1rem;
 }
 
 .image-text-section p {
-  font-size: 1.2rem;
+  font-size: 1.25rem;
   line-height: 1.5;
   margin-bottom: 2rem;
 }
 
 .cta-button {
   padding: 0.75rem 2rem;
-  font-size: 1.2rem;
+  font-size: 1.25rem;
   border-radius: 4px;
   border: none;
-  background-color: #0077cc;
-  color: #fff;
+  background-color: #406e8c;
+  color: #ffffff;
   cursor: pointer;
   transition: background-color 0.3s ease-in-out;
 }
 
 .cta-button:hover {
-  background-color: #005fa3;
+  background-color: #103953;
 }
 
 
@@ -364,6 +377,11 @@ textarea {
   align-items: center;
   margin-bottom: 40px;
   width: 100%;
+}
+
+.thumbnail-gallery h2 {
+  font-size: 2.25rem;
+  font-weight: bold;
 }
 
 .gallery-row {
@@ -400,7 +418,7 @@ textarea {
 .lightbox-modal img {
   max-width: 90%;
   max-height: 80%;
-  margin-top: 10%;
+  margin-top: 8%;
 }
 
 .lightbox-controls {
@@ -414,7 +432,7 @@ textarea {
 
 .lightbox-controls button {
   opacity: 0.2;
-  background-color: white;
+  background-color: #ffffff;
   border: none;
   font-size: 3rem;
   cursor: pointer;
@@ -423,16 +441,17 @@ textarea {
 .close-btn {
   position: absolute;
   top: 15px;
-  right: 35px;
+  right: 25px;
   font-size: 50px;
   font-weight: bold;
-  color: #fff;
+  color: #ffffff;
   cursor: pointer;
 }
 
 /* Content Block */
-.content-block {
-  font-family: Arial, sans-serif;
+.content-block h2 {
+  font-size: 2.25rem;
+  font-weight: bold;
 }
 
 .content {
@@ -443,11 +462,11 @@ textarea {
 }
 
 .toggle {
-  font-size: 24px;
-  font-weight: bold;
+  font-size: 1.5rem;
+  color: #ffffff;
   margin: 1px 0;
   cursor: pointer;
-  background-color: #f1f1f1;
+  background-color: #215170;
   padding: 10px 10px 10px 30px;
   position: relative;
 
@@ -465,8 +484,10 @@ textarea {
 
 .toggle-content {
   display: none;
-  font-size: 16px;
+  background-color: #dde9eb;
+  font-size: 1.25rem;
   line-height: 1.5;
+  padding: 0 60px;
   margin-bottom: 20px;
   height: 0;
   overflow: hidden;
@@ -488,7 +509,7 @@ textarea {
 }
 
 .toggle-content a {
-  color: #008CBA;
+  color: #215170;
   cursor: pointer;
 
 }
@@ -498,18 +519,31 @@ textarea {
   height: auto;
 }
 
+.video-wrapper{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.video-container h2 {
+  font-size: 2.25rem;
+  font-weight: bold;
+}
+
 /* Footer */
 footer {
-  background-color: #f1f1f1;
+  background-color: #103953;
   padding: 20px 0;
   text-align: center;
 }
 
 .footer-cols {
   display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 20% 60% 20%;
 }
 
 .col {
@@ -518,6 +552,8 @@ footer {
 }
 
 .col h4 {
+  font-size: 1.25rem;
+  color: #ffffff;
   margin-bottom: 10px;
 }
 
@@ -529,15 +565,18 @@ footer {
 
 .col ul li {
   margin-bottom: 5px;
+  font-size: 1rem;
 }
 
 .col ul li a {
-  color: #555;
+  color: #ffffff;
   text-decoration: none;
 }
 
 .col:last-child {
   text-align: right;
+  margin-top: 30px;
+  margin-right: 50px;
 }
 
 .col:last-child img {
@@ -545,11 +584,18 @@ footer {
   width: auto;
 }
 
-
 .footer-tagline {
   margin-top: 10px;
-  font-size: 20px;
-  color: #555;
+  font-size: 1.25rem;
+  color: #ffffff;
+}
+
+
+@keyframes scale{
+  to{
+      transform: translate(-50%, -50%) scale(3);
+      opacity: 0;
+  }
 }
 
 @media screen and (max-width: 480px) {
@@ -566,6 +612,8 @@ footer {
 
   .menu-toggle {
     display: block;
+    background-color: #103953;
+    color:#fff;
     height: 50%;
   }
 
@@ -574,7 +622,7 @@ footer {
     position: absolute;
     top: 100%;
     z-index: 999;
-    background-color: #005fa3;
+    background-color: #215170;
   }
 
   .menu.active {
@@ -584,12 +632,12 @@ footer {
   .menu ul {
     display: flex;
     flex-direction: column;
-    font-size: 12px;
+    font-size: 0.8rem;
   }
 
   .menu ul li:hover ul {
     display: block;
-    background: #333;
+    background: #406e8c;
     position: absolute;
     left: 100%;
     top: 0;
@@ -620,6 +668,10 @@ footer {
     width: 70%;
   }
 
+  .sub-header {
+    margin-bottom: 30px;
+  }
+
   .main-content {
     padding: 0 16px;
   }
@@ -630,9 +682,15 @@ footer {
     row-gap: 20px;
   }
 
+  .card {
+    grid-template-rows: 60% 10% 40%;
+  }
+
   .image-text-section {
     grid-template-columns: auto;
     grid-template-rows: repeat(2, auto);
+    margin-top: 30px;
+    padding: 0;
   }
 
   .gallery-row {
@@ -646,5 +704,21 @@ footer {
     justify-content: center;
     max-width: 100%;
     max-height: 100%;
+  }
+.footer-cols {
+  display: grid;
+  grid-template-columns: auto;
+}
+
+ 
+  .col:last-child {
+    margin: 0;
+    display: block;
+    margin: auto;
+    padding: 30px;
+  }
+  .col:last-child img{
+    height: 60px;
+    width: auto;
   }
 }

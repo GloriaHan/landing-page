@@ -79,11 +79,20 @@ function submitForm() {
   } else {
     document.getElementById('text').style.border = '1px solid #ced4da'
   }
+
+  // validate the email
+  const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
+  if (!emailRegex.test(email)) {
+    document.getElementById('email').style.border = '1px solid red'
+    isValid = false
+  } else {
+    document.getElementById('email').style.border = '1px solid #ced4da'
+  }
+
   // Validate the phone number
   const phoneRegex1 = /^\d{4} \d{3} \d{3}$/
   const phoneRegex2 = /^\d{10}$/
   if (!phoneRegex1.test(phone) && !phoneRegex2.test(phone)) {
-    console.log("rest")
     document.getElementById('phone').style.border = '1px solid red'
     isValid = false
   } else {
