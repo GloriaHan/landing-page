@@ -285,9 +285,9 @@ textarea {
 .card {
   box-sizing: border-box;
   display: grid;
-  grid-template-rows: 70% 10% 20%;
+  grid-template-rows: 7ft 1ft 2ft;
   width: 100%;
-  height: 100%;
+  /* height: 100%; */
   background-color: #ffffff;
   border: 1px solid #ccc;
   border-radius: 4px;
