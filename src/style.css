@@ -329,7 +329,7 @@ textarea {
 /* Second section:image text section*/
 .image-text-section {
   display: grid;
-  grid-template-columns: repeat(3, auto);
+  grid-template-columns: 50% auto;
   grid-template-rows: repeat(3, auto);
   column-gap: 50px;
   align-items: center;
@@ -607,7 +607,7 @@ footer {
   }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 960px) {
 
   html,
   body {
