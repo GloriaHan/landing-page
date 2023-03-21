@@ -793,11 +793,7 @@ footer {
     height: 60px;
     width: auto;
   }
-}
 
-
-
-@media (max-width: 768px) {
   .video-wrapper iframe {
     width: 100%;
   }
