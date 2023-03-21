@@ -164,16 +164,17 @@ galleryImages.forEach((img, index) => {
   img.addEventListener('click', function () {
     currentImgIndex = index
     showLightbox()
-    setLightboxImg()
+    setLightboxImg(img.dataset.full)
   })
 })
-
 prevBtn.addEventListener('click', function () {
   currentImgIndex--
   if (currentImgIndex < 0) {
     currentImgIndex = galleryImages.length - 1
   }
-  setLightboxImg()
+  setLightboxImg(galleryImages[currentImgIndex].dataset.full)
+console.log(lightboxImg)
+
 })
 
 nextBtn.addEventListener('click', function () {
@@ -181,7 +182,8 @@ nextBtn.addEventListener('click', function () {
   if (currentImgIndex > galleryImages.length - 1) {
     currentImgIndex = 0
   }
-  setLightboxImg()
+  setLightboxImg(galleryImages[currentImgIndex].dataset.full)
+  console.log(lightboxImg)
 })
 
 const closeBtn = document.querySelector('.close-btn')
@@ -203,7 +205,8 @@ function hideLightbox() {
 }
 
 function setLightboxImg() {
-  lightboxImg.src = galleryImages[currentImgIndex].src
+  let fullSizeImgSrc = galleryImages[currentImgIndex].dataset.full
+  lightboxImg.src = fullSizeImgSrc
 }
 
 // content block
