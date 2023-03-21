@@ -13,6 +13,7 @@
 
 <body>
   <header class="header">
+    <a href="#sub-header" class="skip-to-content" tabindex="1">Skip to sub header</a>
     <div class="logo">
       <a href="#"><img src="./img/unimelb-logo.svg" alt="Landing College logo"></a>
     </div>
@@ -57,11 +58,12 @@
     </div>
     <div class="search">
       <input type="text" class="searchinput" placeholder="search..." aria-label="Search">
-      <button class="btn" aria-label="Search button"><i class="fas fa-search"></i></button>
+      <button class="btn" aria-label="Search button" title="Click to search" tabindex="0"><i
+          class="fas fa-search"></i></button>
     </div>
   </header>
 
-  <div class="sub-header">
+  <div id="sub-header" class="sub-header">
     <div class="contact-form">
       <h2>Accommodation Application</h2>
       <form id="myForm" novalidate onsubmit="event.preventDefault(); submitForm()">
@@ -76,7 +78,7 @@
         <label for="text" class="required">Accommodation preferences:</label>
         <textarea id="text" name="text" rows="4" required></textarea>
         <div class="submit-button">
-          <button type="submit">Submit</button>
+          <button type="submit" aria-label="Submit your information">Submit</button>
         </div>
       </form>
       <div class="message" style="display:none;">
@@ -105,14 +107,16 @@
     <!-- First Section - 3 Cards -->
     <section class="cards-section">
       <div class="card">
-        <img src="./img/Newman College.jpg" alt="Newman College">
+        <img src="./img/Newman College.jpg"
+          alt="Newman College - co-educational residential College affiliated with the University of Melbourne">
         <a href="#">
           <h3>Newman College</h3>
         </a>
         <p>Newman College is a co-educational residential College affiliated with the University of Melbourne. </p>
       </div>
       <div class="card">
-        <img src="./img/Ormond College.jpg" alt="Ormond College">
+        <img src="./img/Ormond College.jpg"
+          alt="Ormond College - 10 acres of land on the northern end of the University of Melbourne’s Parkville campus">
         <a href="#">
           <h3>Ormond College</h3>
         </a>
@@ -121,7 +125,7 @@
         </p>
       </div>
       <div class="card">
-        <img src="./img/Queen's College.jpg" alt="Queen's College">
+        <img src="./img/Queen's College.jpg" alt="Queen's College - take your university experience to the next level">
         <a href="#">
           <h3>Queen's College</h3>
         </a>
@@ -132,13 +136,13 @@
 
     <!-- Second Section - Image Left Text Right -->
     <section class="image-text-section">
-      <img src="./img/Schedule a tour.jpg" alt="Schedule a tour">
+      <img src="./img/Schedule a tour.jpg" alt="Person scheduling a tour of the campus">
       <h2>Schedule a tour</h2>
       <p>Interested in seeing our beautiful campus and facilities in person? Schedule a tour today and let one of our
         knowledgeable staff members show you around. You'll get an up-close look at our living spaces, recreational
         areas, and state-of-the-art amenities, and you'll have the opportunity to ask any questions you may have about
         our programs and services. Don't wait, schedule your tour now!</p>
-      <button class="cta-button">Schedule a tour</button>
+      <button class="cta-button" aria-label="Schedule a tour">Schedule a tour</button>
     </section>
 
     <!-- Third Section - Thumbnail Gallery -->
@@ -225,11 +229,13 @@
     </section>
   </section>
 
+  <button id="back-to-top" class="back-to-top">Top</button>
+
   <!-- Footer -->
-  <footer>
+  <footer aria-label="Website Footer">
     <div class="footer-cols">
       <div class="col">
-        <h4>Site Navigation</h4>
+        <h4>SITE NAVIGATION</h4>
         <ul>
           <li><a href="#">Home</a></li>
           <li><a href="#">About Us</a></li>
@@ -238,15 +244,15 @@
         </ul>
       </div>
       <div class="col">
-        <h4>More Links</h4>
+        <h4>LEGAL & POLICIES</h4>
         <ul>
-          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Policies</a></li>
           <li><a href="#">Terms of Use</a></li>
           <li><a href="#">FAQs</a></li>
         </ul>
       </div>
       <div class="col">
-        <img src="./img/unimelb-logo.svg" alt="Footer Logo">
+        <img src="./img/unimelb-logo.svg" alt="Residential College logo">
       </div>
     </div>
     <div class="footer-tagline">Built with Acora</div>

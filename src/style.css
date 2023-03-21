@@ -23,7 +23,27 @@ body {
   align-items: center;
   max-height: 6rem;
   width: 100%;
+  position: relative;
 }
+
+.skip-to-content {
+  position: absolute;
+  left: -9999px;
+  z-index: 999;
+  padding: 1em;
+  font-size: 1.25rem;
+  background-color: #ffffff;
+  color: #303030;
+  opacity: 0;
+}
+
+.skip-to-content:focus {
+  left: 5px;
+  top: 5px;
+  transform: translateX(0%);
+  opacity: 1;
+}
+
 
 .logo a {
   display: flex;
@@ -355,8 +375,9 @@ textarea {
 }
 
 .image-text-section p {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   line-height: 1.5;
+  padding-right: 40px;
   grid-area: c;
   align-self: start;
   margin: 0;
@@ -493,7 +514,7 @@ textarea {
 
 .toggle-content {
   display: none;
-  background-color: #dde9eb;
+  background-color: #e8e9e9;
   font-size: 1.25rem;
   line-height: 1.5;
   padding: 0 60px;
@@ -540,6 +561,33 @@ textarea {
 .video-container h2 {
   font-size: 2.25rem;
   font-weight: bold;
+}
+
+/* back-to-top */
+.back-to-top {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 99;
+  font-size: 14px;
+  font-weight: bold;
+  border: none;
+  outline: none;
+  background-color: #303030;
+  color: #ffffff;
+  opacity: 0.7;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 5px;
+  width: 40px;
+  height: 60px;
+  text-align: center;
+  line-height: 1.2;
+}
+
+#back-to-top:hover {
+  background-color: #666;
 }
 
 /* Footer */
