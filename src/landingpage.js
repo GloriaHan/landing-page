@@ -1,4 +1,4 @@
-// menu
+// header: menu
 const menuToggle = document.querySelector('.menu-toggle')
 const menu = document.querySelector('.menu')
 
@@ -16,7 +16,7 @@ document.addEventListener('click', (event) => {
 })
 
 
-// search bar
+// header: search bar
 const search = document.querySelector('.search')
 const btn = document.querySelector('.btn')
 const searchinput = document.querySelector('.searchinput')
@@ -39,7 +39,6 @@ if (message) {
 }
 
 function submitForm() {
-  // Collect form data
   const firstName = document.getElementById('firstName').value
   const lastName = document.getElementById('lastName').value
   const email = document.getElementById('email').value
@@ -142,8 +141,7 @@ setInterval(() => {
   showSlide(currentSlide + 1)
 }, 4000)
 
-// Page Content
-// First section: 3 cards
+// main Content - First section: 3 cards
 const cards = document.querySelectorAll('.card')
 
 cards.forEach((card) => {
@@ -152,7 +150,7 @@ cards.forEach((card) => {
   })
 })
 
-// Third section: thumbnail gallery images
+// main Content - Third section: thumbnail gallery images
 const galleryImages = document.querySelectorAll('.thumbnail-gallery img')
 const lightboxModal = document.getElementById('lightbox-modal')
 const lightboxImg = document.getElementById('lightbox-img')
@@ -164,6 +162,7 @@ galleryImages.forEach((img, index) => {
   img.addEventListener('click', function () {
     currentImgIndex = index
     showLightbox()
+    // get the full size images
     setLightboxImg(img.dataset.full)
   })
 })
@@ -173,8 +172,6 @@ prevBtn.addEventListener('click', function () {
     currentImgIndex = galleryImages.length - 1
   }
   setLightboxImg(galleryImages[currentImgIndex].dataset.full)
-console.log(lightboxImg)
-
 })
 
 nextBtn.addEventListener('click', function () {
@@ -183,7 +180,6 @@ nextBtn.addEventListener('click', function () {
     currentImgIndex = 0
   }
   setLightboxImg(galleryImages[currentImgIndex].dataset.full)
-  console.log(lightboxImg)
 })
 
 const closeBtn = document.querySelector('.close-btn')
@@ -209,7 +205,7 @@ function setLightboxImg() {
   lightboxImg.src = fullSizeImgSrc
 }
 
-// content block
+// main Content - fourth section: content block
 const toggles = document.querySelectorAll('.toggle')
 
 toggles.forEach((toggle) => {
@@ -218,6 +214,7 @@ toggles.forEach((toggle) => {
   })
 })
 
+// back to top button
 const button = document.getElementById("back-to-top");
 
 window.onscroll = function() {

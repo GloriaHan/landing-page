@@ -13,7 +13,7 @@ body {
   font-size: 1rem;
   width: 100%;
 }
-
+/* header */
 .header {
   font-size: 3rem;
   font-weight: bold;
@@ -549,6 +549,7 @@ textarea {
   height: auto;
 }
 
+/* video section */
 .video-wrapper {
   position: relative;
   display: flex;
