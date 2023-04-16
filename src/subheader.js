@@ -10,14 +10,13 @@ function submitForm() {
   let isValid = true
   const firstNameLabel = document.querySelector('label[for="firstName"]')
   const firstNameError = document.querySelector('#firstNameError')
-  // const accommodationError = document.querySelector('#firstNameError')
   if (firstName === '') {
     document.getElementById('firstName').style.border = '1px solid red'
     if (!firstNameError) {
       const errorEl = document.createElement('span')
       errorEl.id = 'firstNameError'
       errorEl.style.color = 'red'
-      errorEl.textContent = ' (Please enter your first name)'
+      errorEl.textContent = ' (enter your first name)'
       firstNameLabel.appendChild(errorEl)
     }
     isValid = false
@@ -28,43 +27,6 @@ function submitForm() {
     }
   }
 
-  // if (lastName === '') {
-  //   document.getElementById('lastName').style.border = '1px solid red'
-  //   isValid = false
-  // } else {
-  //   document.getElementById('lastName').style.border = '1px solid #ced4da'
-  // }
-
-  // if (email === '') {
-  //   document.getElementById('email').style.border = '1px solid red'
-  //   isValid = false
-  // } else {
-  //   document.getElementById('email').style.border = '1px solid #ced4da'
-  // }
-
-  // if (phone === '') {
-  //   document.getElementById('phone').style.border = '1px solid red'
-  //   isValid = false
-  // } else {
-  //   document.getElementById('phone').style.border = '1px solid #ced4da'
-  // }
-
-  // if (text === '') {
-  //   document.getElementById('text').style.border = '1px solid red'
-  //   isValid = false
-  // } else {
-  //   document.getElementById('text').style.border = '1px solid #ced4da'
-  // }
-
-  // // validate the email
-  // const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
-  // if (!emailRegex.test(email)) {
-  //   document.getElementById('email').style.border = '1px solid red'
-  //   isValid = false
-  // } else {
-  //   document.getElementById('email').style.border = '1px solid #ced4da'
-  // }
-
   const lastNameLabel = document.querySelector('label[for="lastName"]')
   const lastNameError = document.querySelector('#lastNameError')
   if (lastName === '') {
@@ -73,7 +35,7 @@ function submitForm() {
       const errorEl = document.createElement('span')
       errorEl.id = 'lastNameError'
       errorEl.style.color = 'red'
-      errorEl.textContent = '(Please enter your last name)'
+      errorEl.textContent = '(enter your last name)'
       lastNameLabel.appendChild(errorEl)
     }
     isValid = false
@@ -94,7 +56,7 @@ function submitForm() {
       const errorEl = document.createElement('span')
       errorEl.id = 'emailError'
       errorEl.style.color = 'red'
-      errorEl.textContent = '(Please enter your email)'
+      errorEl.textContent = '(enter your email)'
       emailLabel.appendChild(errorEl)
     }
     isValid = false
@@ -104,7 +66,7 @@ function submitForm() {
       const errorEl = document.createElement('span')
       errorEl.id = 'emailError'
       errorEl.style.color = 'red'
-      errorEl.textContent = '(Please enter a valid email address)'
+      errorEl.textContent = '(enter a valid email address)'
       emailLabel.appendChild(errorEl)
     }
     isValid = false
@@ -115,28 +77,6 @@ function submitForm() {
     }
   }
 
-  // Validate the phone number
-
-  // const phoneLabel = document.querySelector('label[for="phone"]')
-  // const phoneError = document.querySelector('#phoneError')
-  // const phoneRegex1 = /^\d{4} \d{3} \d{3}$/
-  // const phoneRegex2 = /^\d{10}$/
-  // if (!phoneRegex1.test(phone) && !phoneRegex2.test(phone)) {
-  //   document.getElementById('phone').style.border = '1px solid red'
-  //   if (!phoneError) {
-  //     const errorEl = document.createElement('p')
-  //     errorEl.id = 'phoneError'
-  //     errorEl.style.color = 'red'
-  //     errorEl.textContent = 'Please enter a valid phone number'
-  //     phoneLabel.appendChild(errorEl)
-  //   }
-  //   isValid = false
-  // } else {
-  //   document.getElementById('phone').style.border = '1px solid #ced4da'
-  //   if (phoneError) {
-  //     phoneError.remove()
-  //   }
-  // }
   const phoneLabel = document.querySelector('label[for="phone"]')
   const phoneError = document.querySelector('#phoneError')
 
@@ -146,7 +86,7 @@ function submitForm() {
       const errorEl = document.createElement('span')
       errorEl.id = 'phoneError'
       errorEl.style.color = 'red'
-      errorEl.textContent = '(Please enter your phone number)'
+      errorEl.textContent = '(enter your phone number)'
       phoneLabel.appendChild(errorEl)
     }
     isValid = false
@@ -159,7 +99,7 @@ function submitForm() {
         const errorEl = document.createElement('span')
         errorEl.id = 'phoneError'
         errorEl.style.color = 'red'
-        errorEl.textContent = '(Please enter a valid phone number)'
+        errorEl.textContent = '(enter a valid phone number)'
         phoneLabel.appendChild(errorEl)
       }
       isValid = false
@@ -179,7 +119,7 @@ function submitForm() {
       const errorEl = document.createElement('span')
       errorEl.id = 'textError'
       errorEl.style.color = 'red'
-      errorEl.textContent = '(Please enter your message)'
+      errorEl.textContent = '(enter your message)'
       textLabel.appendChild(errorEl)
     }
     isValid = false
@@ -225,6 +165,7 @@ function showSlide(index) {
 
   currentSlide = index
 }
+
 
 setInterval(() => {
   showSlide(currentSlide + 1)

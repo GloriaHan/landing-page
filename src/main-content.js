@@ -23,6 +23,23 @@ galleryImages.forEach((img, index) => {
     setLightboxImg(img.dataset.full)
   })
 })
+
+document.addEventListener('keydown', function (event) {
+  if (event.key === 'ArrowLeft') {
+    currentImgIndex--;
+    if (currentImgIndex < 0) {
+      currentImgIndex = galleryImages.length - 1;
+    }
+    setLightboxImg(galleryImages[currentImgIndex].dataset.full);
+  } else if (event.key === 'ArrowRight') {
+    currentImgIndex++;
+    if (currentImgIndex > galleryImages.length - 1) {
+      currentImgIndex = 0;
+    }
+    setLightboxImg(galleryImages[currentImgIndex].dataset.full);
+  } 
+});
+
 prevBtn.addEventListener('click', function () {
   currentImgIndex--
   if (currentImgIndex < 0) {
@@ -42,6 +59,12 @@ nextBtn.addEventListener('click', function () {
 const closeBtn = document.querySelector('.close-btn')
 closeBtn.addEventListener('click', function () {
   hideLightbox()
+})
+
+document.addEventListener('keydown', function (event) {
+  if (event.key === 'Escape') {
+    hideLightbox()
+  }
 })
 
 function showLightbox() {
