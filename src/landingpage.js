@@ -15,7 +15,6 @@ document.addEventListener('click', (event) => {
   }
 })
 
-
 // header: search bar
 const search = document.querySelector('.search')
 const btn = document.querySelector('.btn')
@@ -26,17 +25,15 @@ btn.addEventListener('click', () => {
   searchinput.focus()
 })
 
-
-
 // Sub Header: accommodation application form
-const message = localStorage.getItem('message')
-
-if (message) {
-  document.querySelector('.message').style.display = 'block'
-  document.getElementById('firstNameResult').textContent = message
-  // Remove the message from local storage so it doesn't show again on refresh
-  localStorage.removeItem('message')
-}
+// const message = localStorage.getItem('message')
+// console.log(message)
+// if (message) {
+// document.querySelector('.message').style.display = 'block'
+// document.getElementById('firstNameResult').textContent = message
+// Remove the message from local storage so it doesn't show again on refresh
+// localStorage.removeItem('message')
+// }
 
 function submitForm() {
   const firstName = document.getElementById('firstName').value
@@ -215,17 +212,17 @@ toggles.forEach((toggle) => {
 })
 
 // back to top button
-const button = document.getElementById("back-to-top");
+const button = document.getElementById('back-to-top')
 
-window.onscroll = function() {
+window.onscroll = function () {
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    button.style.display = "block";
+    button.style.display = 'block'
   } else {
-    button.style.display = "none";
+    button.style.display = 'none'
   }
-};
+}
 
-button.onclick = function() {
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
-};
+button.onclick = function () {
+  document.body.scrollTop = 0
+  document.documentElement.scrollTop = 0
+}
