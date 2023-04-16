@@ -24,6 +24,7 @@ galleryImages.forEach((img, index) => {
   })
 })
 
+// add keydown eventlistener 
 document.addEventListener('keydown', function (event) {
   if (event.key === 'ArrowLeft') {
     currentImgIndex--;
@@ -87,7 +88,6 @@ function setLightboxImg() {
 
 // main Content - fourth section: content block
 const toggles = document.querySelectorAll('.toggle')
-
 toggles.forEach((toggle) => {
   toggle.addEventListener('click', () => {
     toggle.classList.toggle('active')

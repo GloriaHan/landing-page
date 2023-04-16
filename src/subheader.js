@@ -16,7 +16,8 @@ function submitForm() {
       const errorEl = document.createElement('span')
       errorEl.id = 'firstNameError'
       errorEl.style.color = 'red'
-      errorEl.textContent = ' (enter your first name)'
+      errorEl.style.fontSize = '1rem'
+      errorEl.textContent = ' (Please enter your first name)'
       firstNameLabel.appendChild(errorEl)
     }
     isValid = false
@@ -35,7 +36,8 @@ function submitForm() {
       const errorEl = document.createElement('span')
       errorEl.id = 'lastNameError'
       errorEl.style.color = 'red'
-      errorEl.textContent = '(enter your last name)'
+      errorEl.style.fontSize = '1rem'
+      errorEl.textContent = '(Please enter your last name)'
       lastNameLabel.appendChild(errorEl)
     }
     isValid = false
@@ -56,21 +58,24 @@ function submitForm() {
       const errorEl = document.createElement('span')
       errorEl.id = 'emailError'
       errorEl.style.color = 'red'
-      errorEl.textContent = '(enter your email)'
-      emailLabel.appendChild(errorEl)
-    }
-    isValid = false
-  } else if (!emailRegex.test(email)) {
-    document.getElementById('email').style.border = '1px solid red'
-    if (!emailError) {
-      const errorEl = document.createElement('span')
-      errorEl.id = 'emailError'
-      errorEl.style.color = 'red'
-      errorEl.textContent = '(enter a valid email address)'
+      errorEl.style.fontSize = '1rem'
+      errorEl.textContent = '(Please enter your email)'
       emailLabel.appendChild(errorEl)
     }
     isValid = false
   } else {
+    if (!emailRegex.test(email)) {
+      document.getElementById('email').style.border = '1px solid red'
+      if (!emailError) {
+        const errorEl = document.createElement('span')
+        errorEl.id = 'emailError'
+        errorEl.style.color = 'red'
+        errorEl.style.fontSize = '1rem'
+        errorEl.textContent = '(Please enter a valid email address)'
+        emailLabel.appendChild(errorEl)
+      }
+      isValid = false
+    }
     document.getElementById('email').style.border = '1px solid #ced4da'
     if (emailError) {
       emailError.remove()
@@ -79,14 +84,14 @@ function submitForm() {
 
   const phoneLabel = document.querySelector('label[for="phone"]')
   const phoneError = document.querySelector('#phoneError')
-
   if (phone === '') {
     document.getElementById('phone').style.border = '1px solid red'
     if (!phoneError) {
       const errorEl = document.createElement('span')
       errorEl.id = 'phoneError'
       errorEl.style.color = 'red'
-      errorEl.textContent = '(enter your phone number)'
+      errorEl.style.fontSize = '1rem'
+      errorEl.textContent = '(Please enter your phone number)'
       phoneLabel.appendChild(errorEl)
     }
     isValid = false
@@ -99,7 +104,8 @@ function submitForm() {
         const errorEl = document.createElement('span')
         errorEl.id = 'phoneError'
         errorEl.style.color = 'red'
-        errorEl.textContent = '(enter a valid phone number)'
+        errorEl.style.fontSize = '1rem'
+        errorEl.textContent = '(Please enter a valid phone number)'
         phoneLabel.appendChild(errorEl)
       }
       isValid = false
@@ -119,7 +125,8 @@ function submitForm() {
       const errorEl = document.createElement('span')
       errorEl.id = 'textError'
       errorEl.style.color = 'red'
-      errorEl.textContent = '(enter your message)'
+      errorEl.style.fontSize = '1rem'
+      errorEl.textContent = '(Please enter your message)'
       textLabel.appendChild(errorEl)
     }
     isValid = false
@@ -165,7 +172,6 @@ function showSlide(index) {
 
   currentSlide = index
 }
-
 
 setInterval(() => {
   showSlide(currentSlide + 1)
